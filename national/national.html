@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National Holidays</title>
+    <link rel="stylesheet" href="national.css">
+    </head>
+    <body>
+
+        <!-- website travelling -->
+         <div class="app-container">
+
+        <!-- Holiday container -->
+        <div class="main-container">
+
+        <!-- Indian and International holiday Buttons -->
+        <div>
+        <button class="button active">Indian Holidays</button>
+        <button class="button">International Holidays</button> 
+        </div>
+
+         <!-- Package Items --> 
+            <div class="package-item">
+            <ul class="package-list">
+                <li class="list-item" id="withOutflightSection" onClick="packageWithOutFlight()">package without Flights</li> 
+                <li class="list-item" id="withFlightSection"  onClick="packageWithFlight()">package withFlights</li>
+                <li class="list-item" id="busSection"  onClick="busPackage()">package with bus</li>
+            </ul>
+            </div>
+       
+        
+      
+            <!-- Input labels search the destination with date -->
+        <div id="none" class="package-section show">
+        
+
+
+           <!-- Flights Section -->
+          <div id="flightSection" class="package-section">
+                <div class="input-labels">
+                    <div class="input-container">
+                        <label>Destination</label>
+                        <input type="text" placeholder="Search & Select Package" />
+                    </div>
+            
+                    <!-- Jorney start date -->
+                    <div class="input-container">
+                        <label>Trip Start Date</label>
+                        <input type="date" id="todayDate" />
+                    </div> 
+
+                    <!-- journy Return date --> 
+                    <div class="input-container">
+                        <label>Trip Return Date</label>
+                        <input type="date" id="returnDate"  />
+                    </div>
+                </div>
+
+                <!-- /Buttond for Round and Multi city --> 
+                <div class="button-container">
+                    <button class="trip-button">Round Trip</button>
+                    <button class="trip-button">MultiCity</button> 
+                </div> 
+
+       
+
+         <!-- Trip from  -->
+         <div class="multicity-container">
+            
+            <!-- input-label Container From Values  -->
+            <div class="input-labels-container">
+                <div class="label-input-box">
+                      <label>From airport</label> 
+                      <p class="date-heading" id="selectedDate"></p>
+                </div>
+          
+                <input type="text" id="FromInput" placeholder="Enter City,airport" class="input-text" /> 
+            </div>  
+
+            <!-- Swapping button -->
+            <button class="swap-button" onClick="swapValues()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5m14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5"/>
+                </svg>
+            </button>
+
+            <!-- input-label Container To Values -->
+            <div class="input-labels-container">
+                <label>To airport</label>
+                    <input type="text" id="ToInput" placeholder="Enter City,airport" class="input-text" />
+            </div> 
+            
+            <!-- input-label Container Class Values -->
+            <div class="input-labels-container"> 
+                <label class="class-heading">class</label>
+                <select class="input-text">
+                    <option>Premium Economy</option> 
+                    <option>Bussiness</option> 
+                    <option>First Class</option>
+                    <option>Economy</option>
+                </select>
+            </div>
+         </div> 
+
+         <!-- Return Trip filed --> 
+            <div class="multicity-container">
+            
+            <!-- input-label Container From Values  -->
+            <div class="input-labels-container">
+                <div class="label-input-box">
+                      <label>Return from airport</label> 
+                      <p class="date-heading" id="returnDateValue"></p>
+                </div>
+          
+                <input type="text" id="FromReturnInput" placeholder="Enter City,airport" class="input-text" /> 
+            </div>  
+
+            <!-- Swapping button -->
+            <button class="swap-button" onClick="swapReturnValues()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5m14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5"/>
+                </svg>
+            </button>
+
+            <!-- input-label Container To Values -->
+            <div class="input-labels-container">
+                <label>Return to airport</label>
+                    <input type="text" id="ToReturnInput" placeholder="Enter City,airport" class="input-text" />
+            </div> 
+            
+            <!-- input-label Container Class Values -->
+            <div class="input-labels-container"> 
+                <label class="class-heading">class</label>
+                <select class="input-text">
+                    <option>Premium Economy</option> 
+                    <option>Bussiness</option> 
+                    <option>First Class</option>
+                    <option>Economy</option>
+                </select>
+            </div>
+         </div> 
+
+         <!-- Passemgers List -->
+        <div class="passenger-hotel-card-container">
+           
+
+            <!-- Passenger Selector -->
+            <div class="passenger-box-container">
+                <div class="passenger-card-item">
+                <label>No. of Passengers</label>
+                <div class="passengers-list-items">
+                    <input type="text" id="passengerInput" class="input-passenger-text" readonly value="0 Adult 0 Children 0 Infant" />
+                    <button class="passenger-button" onclick="togglePassengerPopup()">▼</button>
+                </div>
+                </div>
+
+                <!-- Popup -->
+                <div id="passengerPopup" class="popup hidden passenger-box">
+                <div class="row">
+                    <span>Adult</span>
+                    <span class="adult-item-card">
+                    <button class="btn" onclick="change('adult', 1)">+</button>
+                    <span id="adultCount">0</span>
+                    <button class="btn" onclick="change('adult', -1)">-</button>
+                    </span>
+                </div>
+                <hr/>
+
+                <div class="row">
+                    <span>Children</span>
+                    <span class="adult-item-card">
+                    <button class="btn" onclick="change('child', 1)">+</button>
+                    <span id="childCount">0</span>
+                    <button class="btn" onclick="change('child', -1)">-</button>
+                    </span>
+                </div>
+                <hr/>
+
+                <div class="row">
+                    <span>Infant</span>
+                    <span class="adult-item-card">
+                    <button class="btn" onclick="change('infant', 1)">+</button>
+                    <span id="infantCount">0</span>
+                    <button class="btn" onclick="change('infant', -1)">-</button>
+                    </span>
+                </div>
+                <hr/>
+
+                <button class="apply-btn" onclick="applyPassengers()">Done</button>
+                </div>
+            </div>
+
+            <!-- Hotel Standard -->
+            <div class="hotel-card-item">
+                <h6 class="hotel-standared-heading">Hotel Standard</h6>
+                <div class="star-hotel-button-container">
+                <button class="star-btn" onclick="starHotel(3)">3 
+                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
+                    <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"/>
+                    </svg>
+
+                </button>
+                <button class="star-btn" onclick="starHotel(4)">4 
+                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
+                    <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"/>
+                    </svg>
+
+                </button>
+                <button class="star-btn" onclick="starHotel(5)">5 
+                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
+                    <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"/>
+                    </svg>
+
+                </button>
+                </div>
+            </div>
+
+            <!-- Meals Container -->
+                <div class="meals-container ">
+            <h6 class="title">Meals</h6>
+          <div class="passenger-card">
+            <div class="meal-option">
+                <label class="switch">
+                <input type="checkbox" checked>
+                <span class="slider"></span>
+                </label>
+                <p class="title-lunch">Add Lunch</p>
+            </div>
+
+            <div class="meal-option">
+                <label class="switch">
+                <input type="checkbox">
+                <span class="slider"></span>
+                </label>
+                <p class="title-lunch">Add Dinner</p>
+            </div> 
+        </div>
+    </div> 
+    
+        <button class="button-search">Search</button>
+     
+</div>  
+       
+
+  
+</div>
+</div>
+</div>
+              
+            <!-- Price-container -->
+        
+        <div class="price-container">
+            <p>Price Details</p> 
+
+            <div class="btn-container">
+            <button class="btn-price">$5000</button>
+            <button class="btn-profit">Show my profit</button> 
+                </div>
+             <ul class="price-list">
+                <li><span>₹15,000 x 2 adults </span> <b>₹30,000</b></li>
+                <li><span>₹12,000 x 1 child</span> <b>₹12,000</b></li>
+                <li><span>Supplementary tours</span> <b>₹2,000</b></li>
+                <li class="total-row"><span>Total cost for all</span> <b>₹44,000</b></li>
+                <li><span>GST (5%)</span> <b>₹2,400</b></li>
+    </ul> 
+
+    <hr class="line-hori"/>
+    <div class="total-section">
+        <p>Total Package Incl. GST</p>
+        <h3>₹46,400</h3>
+    </div>
+
+    <hr class="dashed-hori"/>
+    <div class="flight-section">
+        <p>Flight cost</p>
+        <h3>₹25,600</h3>
+    </div>
+
+    <hr>
+
+    <div class="grand-total">
+        <p>Total Package Cost <br> Incl. Flights & GST</p>
+        <h2>₹72,000</h2>
+    </div>
+        </div>
+
+         </div> 
+      
+        
+       <!-- list of flight items card -->
+       
+        <div class="flight-card">
+            <div class="journey-date-card">
+                 <div class="flight-card-text">
+                <p class="flight-title">Air Indian Express</p>
+                <span class="jouney-title">Hyderabad(HYD) to Goa(GOI)-12 March</span>
+                </div> 
+
+
+                <div class="flight-card-text return-card-text">
+                <p class="flight-title">Air Indian Express</p>
+                <span class="jouney-title">Goa(GOI) to Chennai(MAA)-16 March</span>
+                </div>
+            </div> 
+
+            <div class="flight-time-price-card">
+                 <h3 class="time-card">11:30 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M1 8h14M9 3l6 5-6 5" stroke="currentColor" stroke-width="2" fill="none"/>
+                    </svg>18:55</h3>
+                 <h3 class="time-card">12,000</h3> 
+                 <h3 class="time-card">00:50 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M1 8h14M9 3l6 5-6 5" stroke="currentColor" stroke-width="2" fill="none"/>
+                    </svg>
+                01:55</h3> 
+
+                 <h3 class="time-card">13,000</h3> 
+
+                 <p class="total-price-card-title">for all pay <br/>
+                 total fare 25,000</p>
+            </div>
+           
+        </div> 
+
+        <!-- travel-card-container -->
+       
+        
+
+        <div class="entire-list-menu-flight-card">
+            <div class="start-from-menu-card">
+                <div class="place-card-container">
+                <div>
+                    <p class="title-name">Hyderabad(HYD) to Goa(GOI)</p>
+                    <ul class="travel-list-item-card">
+                        <li name="item-name">Airlines</li>
+                        <li>Departure</li>
+                        <li>Duration</li> 
+                        <li>Arrival</li> 
+                        <li>price</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- list -of flights --> 
+        <div class="flight-card-menu">
+            <div class="flight-top">
+            <div class="flight-info">
+            <img src="https://airhex.com/images/airline-logos/air-india-express.png" class="logo"/>
+            <h4 class="title-name-airbus">Air India Express</h4>
+            <p class="flight-no">IX 2879 TC</p>
+        
+        </div>
+
+        <div class="flight-mid">
+        <div class="departure">
+            <h3>12:05</h3>
+            <small>HYD</small>
+        </div>
+
+        <div class="duration-box">
+            <div class="duration-text">0h 25m</div>
+            <div class="duration-line"></div>
+            <small >1 stop · Mumbai Airport</small>
+        </div>
+
+        <div class="arrival">
+            <h3>13:30</h3>
+            <small>GOI</small>
+        </div>
+        </div>
+
+        <div class="flight-price">
+        <p class="pax">3 Pax × ₹4,000</p>
+        <h2>₹12,000</h2>
+        </div>
+    
+            </div> 
+        <hr class="line" />
+    <!-- Amenities INSIDE -->
+    <div class="amenities">
+        <span>🛄 Hand Baggage |</span>
+        <span>🎒 Check-In Baggage |</span>
+        <span>💰 Refundable |</span>
+        <span>📜 Rules</span>
+    </div>
+    
+    </div> 
+            <!-- list of second flight -->
+    <div class="flight-card-menu">
+            <div class="flight-top">
+            <div class="flight-info">
+            <img src="https://airhex.com/images/airline-logos/air-india-express.png" class="logo"/>
+            <h4 class="title-name-airbus">Air India Express</h4>
+            <p class="flight-no">IX 2879 TC</p>
+        
+        </div>
+
+        <div class="flight-mid">
+        <div class="departure">
+            <h3>12:05</h3>
+            <small>HYD</small>
+        </div>
+
+        <div class="duration-box">
+            <div class="duration-text">0h 25m</div>
+            <div class="duration-line"></div>
+            <small >1 stop · Mumbai Airport</small>
+        </div>
+
+        <div class="arrival">
+            <h3>13:30</h3>
+            <small>GOI</small>
+        </div>
+        </div>
+
+        <div class="flight-price">
+        <p class="pax">3 Pax × ₹4,000</p>
+        <h2>₹12,000</h2>
+        </div>
+    
+            </div> 
+        <hr class="line" />
+    <!-- Amenities INSIDE -->
+    <div class="amenities">
+        <span>🛄 Hand Baggage |</span>
+        <span>🎒 Check-In Baggage |</span>
+        <span>💰 Refundable |</span>
+        <span>📜 Rules</span>
+    </div>
+    
+    </div> 
+
+    <!-- list of thired flight -->
+    <div class="flight-card-menu">
+            <div class="flight-top">
+            <div class="flight-info">
+            <img src="https://airhex.com/images/airline-logos/air-india-express.png" class="logo"/>
+            <h4 class="title-name-airbus">Air India Express</h4>
+            <p class="flight-no">IX 2879 TC</p>
+        
+        </div>
+
+        <div class="flight-mid">
+        <div class="departure">
+            <h3>12:05</h3>
+            <small>HYD</small>
+        </div>
+
+        <div class="duration-box">
+            <div class="duration-text">0h 25m</div>
+            <div class="duration-line"></div>
+            <small >1 stop · Mumbai Airport</small>
+        </div>
+
+        <div class="arrival">
+            <h3>13:30</h3>
+            <small>GOI</small>
+        </div>
+        </div>
+
+        <div class="flight-price">
+        <p class="pax">3 Pax × ₹4,000</p>
+        <h2>₹12,000</h2>
+        </div>
+    
+            </div> 
+        <hr class="line" />
+    <!-- Amenities INSIDE -->
+    <div class="amenities">
+        <span>🛄 Hand Baggage |</span>
+        <span>🎒 Check-In Baggage |</span>
+        <span>💰 Refundable |</span>
+        <span>📜 Rules</span>
+    </div>
+    
+    </div>
+</div> 
+
+
+         <!-- list of flight items card -->
+        <div class="return-flight-menu-card">
+                <div class="place-card-container-return">
+                    <div class="place-item">
+                        <p class="title-name">Goa(GOI) to Chennai(MNV)</p>
+                        <ul class="travel-list-item-card">
+                            <li name="item-name">Airlines</li>
+                            <li>Departure</li>
+                            <li>Duration</li> 
+                            <li>Arrival</li> 
+                            <li>price</li>
+                        </ul>
+                    </div>
+                
+            <div>
+                <!-- list -of flights --> 
+            <div class="flight-card-menu">
+                <div class="flight-top">
+                <div class="flight-info">
+                <img src="https://airhex.com/images/airline-logos/air-india-express.png" class="logo"/>
+                <h4 class="title-name-airbus">Air India Express</h4>
+                <p class="flight-no">IX 2879 TC</p>
+            
+            </div>
+
+            <div class="flight-mid">
+            <div class="departure">
+                <h3>12:05</h3>
+                <small>HYD</small>
+            </div>
+
+            <div class="duration-box">
+                <div class="duration-text">0h 25m</div>
+                <div class="duration-line"></div>
+                <small >1 stop · Mumbai Airport</small>
+            </div>
+
+            <div class="arrival">
+                <h3>13:30</h3>
+                <small>GOI</small>
+            </div>
+            </div>
+
+            <div class="flight-price">
+            <p class="pax">3 Pax × ₹4,000</p>
+            <h2>₹12,000</h2>
+            </div>
+        
+                </div> 
+            <hr class="line" />
+        <!-- Amenities INSIDE -->
+        <div class="amenities">
+            <span>🛄 Hand Baggage |</span>
+            <span>🎒 Check-In Baggage |</span>
+            <span>💰 Refundable |</span>
+            <span>📜 Rules</span>
+        </div>
+        
+        </div> 
+                <!-- list of second flight -->
+        <div class="flight-card-menu">
+                <div class="flight-top">
+                <div class="flight-info">
+                <img src="https://airhex.com/images/airline-logos/air-india-express.png" class="logo"/>
+                <h4 class="title-name-airbus">Air India Express</h4>
+                <p class="flight-no">IX 2879 TC</p>
+            
+            </div>
+
+            <div class="flight-mid">
+            <div class="departure">
+                <h3>12:05</h3>
+                <small>HYD</small>
+            </div>
+
+            <div class="duration-box">
+                <div class="duration-text">0h 25m</div>
+                <div class="duration-line"></div>
+                <small >1 stop · Mumbai Airport</small>
+            </div>
+
+            <div class="arrival">
+                <h3>13:30</h3>
+                <small>GOI</small>
+            </div>
+            </div>
+
+            <div class="flight-price">
+            <p class="pax">3 Pax × ₹4,000</p>
+            <h2>₹12,000</h2>
+            </div>
+        
+                </div> 
+            <hr class="line" />
+        <!-- Amenities INSIDE -->
+        <div class="amenities">
+            <span>🛄 Hand Baggage |</span>
+            <span>🎒 Check-In Baggage |</span>
+            <span>💰 Refundable |</span>
+            <span>📜 Rules</span>
+        </div>
+        
+        </div> 
+
+        <!-- list of thired flight -->
+        <div class="flight-card-menu">
+                <div class="flight-top">
+                <div class="flight-info">
+                <img src="https://airhex.com/images/airline-logos/air-india-express.png" class="logo"/>
+                <h4 class="title-name-airbus">Air India Express</h4>
+                <p class="flight-no">IX 2879 TC</p>
+            
+            </div>
+
+            <div class="flight-mid">
+            <div class="departure">
+                <h3>12:05</h3>
+                <small>HYD</small>
+            </div>
+
+            <div class="duration-box">
+                <div class="duration-text">0h 25m</div>
+                <div class="duration-line"></div>
+                <small >1 stop · Mumbai Airport</small>
+            </div>
+
+            <div class="arrival">
+                <h3>13:30</h3>
+                <small>GOI</small>
+            </div>
+            </div>
+
+            <div class="flight-price">
+            <p class="pax">3 Pax × ₹4,000</p>
+            <h2>₹12,000</h2>
+            </div>
+        
+                </div> 
+            <hr class="line" />
+        <!-- Amenities INSIDE -->
+        <div class="amenities">
+            <span>🛄 Hand Baggage |</span>
+            <span>🎒 Check-In Baggage |</span>
+            <span>💰 Refundable |</span>
+            <span>📜 Rules</span>
+        </div>
+        
+        </div>
+        </div>
+        </div>
+    </div>
+</div>
+       
+    
+
+
+
+
+
+ 
+        
+
+
+
+       <script src="national.js"></script>   
+    
+    </body>
+</html>

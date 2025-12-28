@@ -1,0 +1,805 @@
+/* main app conatiner */ 
+.app-container{
+    display: flex;
+    gap:8px;
+}
+
+
+.main-container{
+    width:65%;
+    min-height:400px;
+    box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.1);
+   margin-left:20px
+ 
+} 
+.button{
+    width:160px;
+    height:40px;
+    background-color: transparent;
+    border-radius: 10px;
+    border:2px solid rgb(28, 28, 246);
+    cursor:pointer;
+    margin-top:20px;
+    margin-left:10px;
+} 
+.active{
+    background-color: rgb(28, 28, 246);
+    color:white;
+}
+.package-item{
+    width:100%;
+}
+.package-list{
+    display:flex; 
+    flex-direction: row; 
+    list-style-type: none;
+  
+} 
+.list-item{
+    margin-top: 10px;
+    padding-right:10px;
+    font-size:18px;
+    color:black;
+    font-family: "Roboto", sans-serif;
+
+} 
+.list-item:hover{
+    text-decoration: underline;
+    cursor: pointer;
+    color:rgb(6, 86, 86)
+} 
+.package-name{
+    font-size:15px;
+    font-weight:300;
+    width:100%;
+} 
+.input-labels{
+    display: flex;
+    justify-content: space-between;
+}
+.input-container{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px; 
+    margin-right: 20px;
+} 
+.multicity-container{
+    display: flex;
+    flex-direction: row; 
+    margin-top: 30px;
+    width:100%; 
+    position: relative;
+} 
+.input-labels-container{
+    display: flex;
+    flex-direction: column;
+    margin:10px;
+} 
+.input-text{
+    width:250px;
+    height:30px;
+} 
+.label-input-box{
+    display: flex;
+    justify-content: space-between;
+} 
+.date-heading{
+   margin:0; 
+    padding:0;
+} 
+.swap-button{
+    width:30px;
+    height:30px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top:26px;
+    box-shadow: 1px 4px 5px rgba(78, 29, 29, 0.1); 
+    border:none;
+    border-left:1px solid grey;
+    border-right:1px solid grey;
+} 
+.class-heading{
+    text-align: end; 
+    padding-right:16px;
+} 
+.button-container{
+    display: flex;
+    gap:20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+/* passengers list style */ 
+/* Container holding BOTH sections */
+.passenger-hotel-card-container{
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* Passenger text + select UI */
+.passenger-card-item{
+  display: flex;
+  flex-direction: column;
+  width: 230px;
+}
+
+.passengers-list-items{
+  display: flex;
+  border:1px solid black;
+  border-radius: 6px;
+  padding-right: 4px;
+}
+
+.input-passenger-text{
+  width: 190px;
+  padding: 8px;
+  border:none;
+}
+
+.passenger-button{
+  border:none;
+  background-color: transparent;
+  font-size:18px;
+  cursor: pointer;
+}
+
+/* Popup box */
+.passenger-box-container{
+  position: relative;
+}
+
+.popup {
+  position: absolute;
+  top: 45px;
+  width: 90%;
+  background: #fff; 
+  border: 1px solid black;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 12px;
+  border-radius: 6px;
+  z-index: 999;
+}
+
+.hidden { display: none; }
+
+.row{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 6px 0;
+}
+
+.adult-item-card{
+  display: flex;
+  gap: 8px;
+}
+
+.btn{
+  width: 26px;
+  height: 26px;
+  background:#007bff;
+  color:white;
+  border:none;
+  border-radius:4px;
+  cursor:pointer;
+}
+
+/* Apply Btn */
+.apply-btn{
+  width:100%;
+  margin-top:8px;
+  padding:8px;
+  background:#28a745;
+  color:white;
+  border:none;
+  border-radius:5px;
+  cursor:pointer;
+}
+
+/* Hotel Card */
+.hotel-card-item{
+  display:flex;
+  flex-direction:column;
+  width:250px;
+  margin: 0;
+}
+
+.hotel-standared-heading{
+  font-family:"Roboto";
+  font-size:16px;
+  font-weight:400;
+  margin-bottom:10px;
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+.star-hotel-button-container{
+  display:flex;
+  gap:10px;
+}
+
+.star-btn{
+  border:none;
+  background:#cbc8c8;
+  box-shadow:0 4px 10px rgba(33, 16, 16, 0.1);
+  padding:4px 8px;
+  border-radius:6px;
+  display:flex;
+  flex-direction: row;
+  align-items:center;
+  gap:4px;
+  cursor:pointer;
+  transition:0.2s;
+}
+
+.star-btn:hover{
+  background:#4a0cf4;
+  color:white;
+  transform:scale(0.9);
+}
+
+
+
+
+/* meals Style */ 
+.meals-container {
+ font-family: "Roboto";
+ margin:0;
+ padding: 0;
+}
+
+/* Meals title */
+.title {
+    font-size:16px;
+    font-weight: 300;
+    margin:0;
+    padding-bottom: 10px;
+}
+
+/* Container layout fix */
+.passenger-card{
+  display: flex;
+ 
+  align-items: center;
+  margin:0;
+  padding: 0;
+}
+
+/* Each option */
+.meal-option {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.title-lunch{
+  font-size:12px;
+  margin: 0;
+}
+
+/* Switch toggle style */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 38px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #ccc;
+  border-radius: 34px;
+  transition: 0.3s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px; width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.switch input:checked + .slider {
+  background-color: #4a0cf4;
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(18px);
+}
+
+/* search button */ 
+.button-search{
+    background-color: #4a0cf4;
+    color:white;
+    width:180px;
+    height:40px;
+    border:none;
+    margin-right: 20px;
+} 
+
+
+/* price style css */ 
+.price-container{
+    display:flex;
+    flex-direction: column; 
+    justify-content: center;
+   
+    gap:8px;
+    width:35%;
+     min-height:400px;
+    box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.1);
+   margin-right:20px
+   
+} 
+.line-hori{
+    width:100%;
+    border:1px solid rgb(133, 130, 130);
+}
+.dashed-hori{
+    width:100%;
+    border-top: 1px dashed rgb(133, 130, 130);
+}
+.price-list li{
+    display: flex;
+    justify-content: space-between;
+    margin:8px 16px;
+    font-size:16px;
+    font-family: "Roboto";
+    font-weight:300;
+} 
+.title-name{
+    font-size:18px;
+    font-family: "Roboto";
+    font-weight:900;
+    text-align:start;
+    margin-top: 16px; 
+    margin-left: 20px;
+}
+.total-section{
+     display: flex;
+    justify-content: space-between;
+    margin:8px 16px;
+    font-size:16px;
+    font-family: "Roboto";
+    font-weight:900;
+} 
+
+.total-section h3{
+    margin:0;
+    padding:0;
+} 
+.flight-section{
+        display: flex;
+        justify-content: space-between;
+        margin:8px 16px;
+        font-size:16px;
+        font-family: "Roboto";
+        font-weight:900;
+} 
+.flight-section h3{
+    margin:0;
+    padding:0;
+} 
+.grand-total{
+     display: flex;
+        justify-content: space-between;
+        margin:8px 16px;
+        font-size:16px;
+        font-family: "Roboto";
+        font-weight:900;
+}
+.grand-total p {
+    margin:0;
+    padding:0;
+}
+
+p{
+    font-size:18px;
+    font-family: "Roboto";
+    text-align:center;
+    margin-top: 0;
+}
+.btn-price{
+    background-color: #28a745;
+    border: none;
+    height:30px;
+    width:180px;
+    border-radius: 9px;
+} 
+.btn-profit{
+      border: none;
+    height:30px;
+    width:180px;
+     border-radius: 9px;
+} 
+
+/* flight card bottom section */
+.flight-card{
+    width:100%; 
+    height:70px;
+    background: linear-gradient(to right, rgb(1, 1, 26), rgb(84, 40, 240));
+   margin-top:10px;
+  
+} 
+.journey-date-card{
+    display: flex;
+    flex-direction: row;
+  
+}
+.flight-card-text{
+    display: flex;
+    flex-direction: column;
+  
+      margin-left:10px;
+      font-weight: 200;
+} 
+.return-card-text{
+    display: flex;
+    align-self: center;
+}
+
+.flight-title{
+    font-size:14px;
+    font-family:"Roboto";
+    color:#fff;
+    margin:0;
+    padding:3px;
+} 
+.jouney-title{
+    font-size:14px;
+    font-family:"Roboto";
+    color:#fff;
+    margin: 0;
+     padding-left:3px;
+}
+.flight-time-price-card{
+    display: flex;
+    justify-content: space-around;
+    color:white;
+    font-weight:300;
+  
+} 
+.total-price-card-title{
+    font-weight:300;
+    font-size: 14px;
+} 
+.time-card{
+    font-size:14px;
+    padding-bottom: 30px;
+} 
+
+/* travel-card items list */ 
+.place-card-container{
+    height:80px;
+    width:80%;
+    box-shadow:1px 0px 10px rgba(0, 0, 0, 0.1); 
+    margin-top:10px;
+    margin-left: 20px;
+    flex-grow:2;
+}  
+.place-card-container-return{
+     display: flex;
+    flex-direction: column;
+    width:80%;
+    flex-grow:1;
+    box-sizing: border-box;
+    height:80px;
+    
+} 
+.place-item{
+    height:80px;
+    width:90%;
+   box-shadow:1px 0px 10px rgba(0, 0, 0, 0.1); 
+    margin-top:10px;
+    margin-left: 20px;
+    
+}
+.return-flight-menu-card{
+    width:80%;
+    box-sizing: border-box;
+    height:400px;
+    overflow-y: scroll;
+}
+small{
+    font-size:14px;
+    font-weight:300;
+    gap:4px;
+
+}
+.travel-list-item-card{
+    display: flex;
+    list-style-type:none ;
+    justify-content: space-between;
+    margin:10px;
+    padding: 0;
+} 
+.item-name{
+    font-size:13px;
+    font-weight:100;
+    box-shadow:1px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* list -of flights */
+.logo{
+    width:40px;
+    height:40px;
+} 
+.air-india-container{
+      height:70px;
+    width:50%; 
+    box-shadow:1px 0px 10px rgba(0, 0, 0, 0.1); 
+    margin-top:10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+} 
+.heading-air{
+    font-style:normal;
+    font-size: 12px;
+} 
+
+.time-box{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  width:220px;
+}
+
+
+/* depature box mode */
+.flight-card-menu {
+  border: 1px solid #e5e5e5;
+  background: white;
+  padding: 12px;
+  border-radius: 12px;
+  font-family: Arial, sans-serif;
+  margin-bottom: 18px;
+ 
+  height:120px;
+  list-style-type: none;
+  box-sizing: border-box;
+  margin-left: 0px;
+} 
+.entire-list-menu-flight-card{
+    display: flex;
+    width:100%;
+    gap:15px;
+    box-shadow: 1px 10px 10px rgba(3, 0, 0, 0.1);  
+} 
+.start-from-menu-card{
+    display: flex;
+    flex-direction: column;
+    width:50%;
+    box-sizing: border-box;
+    height:400px;
+    overflow-y: scroll;
+    padding: 8px; 
+}
+
+/* Top row (logo + times + price) */
+.flight-top {
+  display: flex;
+  
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.flight-left {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.flight-info{
+ display: flex;
+  flex-direction: column;
+}
+
+.flight-info h4 {
+  font-size: 12px;
+  font-weight:300;
+  margin: 0;
+}
+
+.flight-info .flight-no {
+  font-size: 11px;
+  font-weight:300;
+  margin: 0;
+  opacity: 0.6;
+ 
+}
+
+.flight-mid {
+  display: flex;
+  padding-bottom: 20px;
+  margin: 0;
+}
+
+.departure, .arrival { 
+  text-align: center; 
+}
+
+.departure h3, .arrival h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.departure small, .arrival small {
+  font-size: 10px;
+  opacity: 0.6;
+}
+
+.duration-box {
+  text-align: center;
+}
+
+.duration-text { 
+  font-size: 10px; 
+  opacity: 0.7; 
+}
+
+.duration-box .small { 
+  font-size: 10px; 
+  opacity: 0.7; 
+}
+.duration-line {
+  width: 60px;
+  height: 1px;
+  background: #777;
+  margin: 4px auto;
+}
+
+.flight-price {
+  text-align: right;
+ padding-bottom: 20px;
+ margin: 0;
+}
+
+.flight-price .pax {
+  font-size: 10px;
+  opacity: 0.6;
+  margin: 0;
+}
+
+.flight-price h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #222;
+}
+
+.line{
+    width:70%;
+    border:1px solid rgb(133, 130, 130);
+    margin-left:auto;
+    padding-left:30px;
+    margin-top: auto;
+}
+/* Amenities INSIDE */
+.amenities {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 14px;
+  gap:24px;
+}
+.bottom-main-menu{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    margin-top: 15px;
+
+}
+.price-summary-box{
+  width: 300px;
+  border: 1px solid #ddd;
+  padding: 18px;
+  border-radius: 10px;
+  font-family: Arial, sans-serif;
+  background: #fff;
+}
+.price-list{
+    list-style-type: none;
+    padding: 0;
+}
+
+
+/* ============ MOBILE (max-width: 768px) ============ */
+@media screen and (max-width: 768px) {
+
+  .app-container{
+      flex-direction: column;
+      gap: 0;
+  }
+
+  .main-container{
+      width: 100%;
+      margin-left: 0;
+      padding: 10px;
+      box-sizing: border-box;
+  }
+
+  .price-container{
+      width: 100%;
+      margin-right: 0;
+      min-height: auto;
+      padding: 10px;
+      flex-direction: column;
+  }
+
+  .button{
+      width: 100%;
+      margin-left: 0;
+  }
+
+  /* top date & destination fields stack */
+  .input-labels{
+      flex-direction: column;
+      gap: 12px;
+  }
+
+  .multicity-container{
+      flex-direction: column;
+  }
+  .input-text{
+      width: 100%;
+  }
+
+  .swap-button{
+      align-self: center;
+      margin: 12px 0;
+  }
+
+  /* Passenger + Hotel container stack */
+  .passenger-hotel-card-container{
+      flex-direction: column;
+      gap: 20px;
+  }
+
+  /* Scrolling flight list – full width in mobile */
+  .entire-list-menu-flight-card{
+      width: 90%;
+      max-height: none;
+      overflow-y: visible;
+      padding: 0;
+      border: none;
+      box-shadow: none;
+  }
+
+  .start-from-menu-card,
+  .return-flight-menu-card{
+      width: 100%;
+  }
+
+  .place-card-container,
+  .place-card-container-return{
+      width: 100%;
+      margin-left: 0;
+  }
+
+  .bottom-main-menu{
+      flex-direction: column;
+      width: 100%;
+  }
+
+  .flight-card{
+      height: auto;
+  }
+
+}
+
