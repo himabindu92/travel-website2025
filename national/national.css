@@ -1,3 +1,8 @@
+* {
+  box-sizing: border-box;
+}
+ 
+
 /* main app conatiner */ 
 .app-container{
     display: flex;
@@ -486,34 +491,36 @@ p{
 /* travel-card items list */ 
 .place-card-container{
     height:80px;
-    width:80%;
+    width:100%;
     box-shadow:1px 0px 10px rgba(0, 0, 0, 0.1); 
     margin-top:10px;
     margin-left: 20px;
-    flex-grow:2;
+    flex:1;
+    
 }  
 .place-card-container-return{
      display: flex;
     flex-direction: column;
-    width:80%;
-    flex-grow:1;
+    width:100%;
+    flex:1;
     box-sizing: border-box;
     height:80px;
     
 } 
 .place-item{
     height:80px;
-    width:90%;
+    width:100%;
    box-shadow:1px 0px 10px rgba(0, 0, 0, 0.1); 
     margin-top:10px;
-    margin-left: 20px;
+   
     
 }
 .return-flight-menu-card{
-    width:80%;
+    width:50%;
     box-sizing: border-box;
     height:400px;
     overflow-y: scroll;
+    flex:1;
 }
 small{
     font-size:14px;
@@ -569,11 +576,9 @@ small{
   border-radius: 12px;
   font-family: Arial, sans-serif;
   margin-bottom: 18px;
- 
   height:120px;
   list-style-type: none;
-  box-sizing: border-box;
-  margin-left: 0px;
+  margin: 0px;
 } 
 .entire-list-menu-flight-card{
     display: flex;
@@ -589,6 +594,7 @@ small{
     height:400px;
     overflow-y: scroll;
     padding: 8px; 
+    flex:1;
 }
 
 /* Top row (logo + times + price) */

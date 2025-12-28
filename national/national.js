@@ -2,6 +2,7 @@ let dateElement = document.getElementById("todayDate");
 let selectedDateElement = document.getElementById("selectedDate");
 let returnElement = document.getElementById("returnDate")
 let returnDateValueElement = document.getElementById("returnDateValue")
+let withOutflightSectionElement = document.getElementById("withOutflightSection");
 
 dateElement.addEventListener("change",function(){
     let selectedDate = new Date(this.value);
@@ -13,6 +14,20 @@ dateElement.addEventListener("change",function(){
     selectedDateElement.textContent = b;
     
 }) 
+
+//bus Travel Navigattion
+function busPackage(){
+   window.location.href="../bus/bus.html";
+}
+
+ withOutflightSectionElement.addEventListener("click",function(){
+  let anchorElement = document.createElement("a");
+  anchorElement.href = "../hotel/hotel.html";
+  anchorElement.style.display="none";
+  document.body.appendChild(anchorElement);
+  anchorElement.click();
+  document.body.removeChild(anchorElement);
+})
 
 function swapValues() { 
     let fromValue = document.getElementById("FromInput");  
